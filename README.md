@@ -1,9 +1,9 @@
 # Week Planner Card
 
-![GitHub Release](https://img.shields.io/github/v/release/FamousWolf/week-planner-card)
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/FamousWolf/week-planner-card/total)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/FamousWolf/week-planner-card)
-![GitHub License](https://img.shields.io/github/license/FamousWolf/week-planner-card)
+![GitHub Release](https://img.shields.io/github/v/release/thermevos/week-planner-card-MMM)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/thermevos/week-planner-card-MMM/total)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/thermevos/week-planner-card-MMM)
+![GitHub License](https://img.shields.io/github/license/thermevos/week-planner-card-MMM)
 [![Static Badge](https://img.shields.io/badge/-buy_me_a_tea-gray?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/rudygnodde)
 
 Custom Home Assistant card displaying a responsive overview of multiple days with events from one or multiple calendars
@@ -28,24 +28,24 @@ Custom Home Assistant card displaying a responsive overview of multiple days wit
 ### HACS (Recommended)
 
 1. Make sure [HACS](https://hacs.xyz) is installed and working.
-2. Add this repository (https://github.com/FamousWolf/week-planner-card) via [HACS Custom repositories](https://hacs.xyz/docs/faq/custom_repositories)
+2. Add this repository (https://github.com/thermevos/week-planner-card-MMM) via [HACS Custom repositories](https://hacs.xyz/docs/faq/custom_repositories)
 3. Download and install using HACS
 
 ### Manual
 
-1. Download and copy `week-planner-card.js` from the [latest release](https://github.com/FamousWolf/week-planner-card/releases/latest) into your `config/www` directory.
+1. Download and copy `week-planner-card-MMM.js` from the [latest release](https://github.com/thermevos/week-planner-card-MMM/releases/latest) into your `config/www` directory.
 2. Add the resource reference to Home Assistant configuration using one of these methods:
   - **Edit your configuration.yaml**
     Add:
     ```yaml
     resources:
-      - url: /local/week-planner-card.js?version=1.7.1
+      - url: /local/week-planner-card-MMM.js?version=1.7.1
     type: module
     ```
   - **Using the graphical editor**
     1. Make sure advanced mode is enabled in your user profile
     2. Navigate to Configuration -> Lovelace Dashboards -> Resources Tab. Hit orange (+) icon
-    3. Enter URL `/local/week-planner-card.js` and select type "JavaScript Module".
+    3. Enter URL `/local/week-planner-card-MMM.js` and select type "JavaScript Module".
     4. Restart Home Assistant.
 
 
@@ -55,7 +55,7 @@ Custom Home Assistant card displaying a responsive overview of multiple days wit
 
 | Name                    | Type             | Default                                            | Supported options                                                                                                                           | Description                                                                            | Version |
 |-------------------------|------------------|----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|---------|
-| `type`                  | string           | **Required**                                       | `custom:week-planner-card`                                                                                                                  | Type of the card                                                                       | 1.0.0   |
+| `type`                  | string           | **Required**                                       | `custom:week-planner-card-MMM`                                                                                                                  | Type of the card                                                                       | 1.0.0   |
 | `title`                 | string           | optional                                           | Any string                                                                                                                                  | Card title                                                                             | 1.6.0   |
 | `days`                  | number \| string | 7                                                  | Any positive integer number \| `month`                                                                                                      | The number of days to show                                                             | 1.0.0   |
 | `startingDay`           | string           | `today`                                            | `today` \| `tomorrow` \| `yesterday` \| `sunday` \| `monday` \| `tuesday` \| `wednesday` \| `thursday` \| `friday` \| `saturday` \| `month` | Day to start with                                                                      | 1.2.0   |
@@ -147,7 +147,7 @@ Like with most cards, you can add custom styling to this card using [card_mod](h
 ### Minimal
 
 ```yaml
-type: custom:week-planner-card
+type: custom:week-planner-card-MMM
 calendars:
   - entity: calendar.my_calendar_1
 ```
@@ -155,7 +155,7 @@ calendars:
 ### Extended
 
 ```yaml
-type: custom:week-planner-card
+type: custom:week-planner-card-MMM
 calendars:
   - entity: calendar.my_calendar_1
     color: '#e6c229'
@@ -180,7 +180,7 @@ texts:
 ### Starting on Sunday
 
 ```yaml
-type: custom:week-planner-card
+type: custom:week-planner-card-MMM
 calendars:
   - entity: calendar.my_calendar_1
     color: '#e6c229'
@@ -196,7 +196,7 @@ texts:
 ### Past events transparent with card_mod
 
 ```yaml
-type: custom:week-planner-card
+type: custom:week-planner-card-MMM
 calendars:
   - entity: calendar.my_calendar_1
     color: '#e6c229'
@@ -212,7 +212,7 @@ card_mod:
 ### Show entire current month
 
 ```yaml
-type: custom:week-planner-card
+type: custom:week-planner-card-MMM
 calendars:
   - entity: calendar.my_calendar_1
 days: month
@@ -222,7 +222,7 @@ startingDay: month
 ### Show month with each day
 
 ```yaml
-type: custom:week-planner-card
+type: custom:week-planner-card-MMM
 calendars:
   - calendar.my_calendar_1
 dayFormat: '''<span class="number">''d''</span> <span class="month">''MMMM''</span>'''
